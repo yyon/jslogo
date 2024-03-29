@@ -1,0 +1,39 @@
+{
+    "name": "@cadenceos/jslogo",
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "author": "Joshua Bell",
+    "description": "LOGO interpreter",
+    "type": "module",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib/**"
+    ],
+    "scripts": {
+        "prepare": "pnpm run build",
+        "build": "tsc && copyfiles -u 1 \"src/**/*.d.ts\" lib",
+        "lint": "eslint src",
+        "fmt": "dprint fmt --excludes=\"lib/**\"",
+        "check": "./check.sh",
+        "clean": "rm -r lib && rm -r node_modules",
+        "watch": "tsc --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tactile-eng/cadenza.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tactile-eng/cadenza/issues"
+    },
+    "homepage": "https://github.com/inexorabletash/jslogo",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "dprint": "^0.45.0",
+        "eslint": "^8.57.0",
+        "typescript": "^5.3.3",
+        "copyfiles": "^2.4.1"
+    },
+    "dependencies": {
+    }
+}
