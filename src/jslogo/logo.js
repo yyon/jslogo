@@ -16,7 +16,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-function LogoInterpreter(turtle, stream, savehook)
+export function LogoInterpreter(turtle, stream, savehook)
 {
   'use strict';
 
@@ -376,9 +376,21 @@ function LogoInterpreter(turtle, stream, savehook)
 
   self.turtle = turtle;
   self.stream = stream;
+  /**
+    * @type any
+    */
   self.routines = new StringMap(true);
+  /**
+    * @type any
+    */
   self.scopes = [new StringMap(true)];
+  /**
+    * @type any
+    */
   self.plists = new StringMap(true);
+  /**
+    * @type any
+    */
   self.prng = new PRNG(Math.random() * 0x7fffffff);
   self.forceBye = false;
 

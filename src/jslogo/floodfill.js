@@ -2,7 +2,7 @@
 // Flood Fill
 // https://github.com/eleks/canvasPaint/blob/master/js/index.js
 
-CanvasRenderingContext2D.prototype.floodFill = function(x, y) {
+export function floodFill(x, y) {
   var context = this,
       canvas = context.canvas,
       w = canvas.width,

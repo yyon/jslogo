@@ -16,9 +16,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function(global) {
-  'use strict';
-
   function deg2rad(d) { return d / 180 * Math.PI; }
   function rad2deg(r) { return r * 180 / Math.PI; }
 
@@ -35,7 +32,7 @@
     return r < 0 ? r + b : r;
   }
 
-  function CanvasTurtle(canvas_ctx, turtle_ctx, w, h, events) {
+  export function CanvasTurtle(canvas_ctx, turtle_ctx, w, h, events) {
     // Stub for old browsers w/ canvas but no text functions
     canvas_ctx.fillText = canvas_ctx.fillText || function fillText(string, x, y) { };
 
@@ -706,5 +703,3 @@
 
   });
 
-  global.CanvasTurtle = CanvasTurtle;
-}(self));
