@@ -12,7 +12,7 @@
     ],
     "scripts": {
         "prepare": "pnpm run build",
-        "build": "tsc && copyfiles -u 1 \"src/**/*.d.ts\" lib",
+        "build": "tsc && copyfiles -u 1 \"src/**/*.d.ts\" lib #",
         "lint": "eslint src",
         "fmt": "dprint fmt --excludes=\"lib/**\"",
         "check": "./check.sh",
